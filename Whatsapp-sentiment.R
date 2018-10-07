@@ -1,7 +1,7 @@
 ####################################################################################
-#
+
 #Collecting and Analyzing whatsapp Data using R
-#
+
 #####################################################################################
 
 #command to set the directory
@@ -33,7 +33,7 @@ text<-as.matrix(text)
 ##########################Data Cleaning#############################################
 text<-tolower(text)
 cleaned<-gsub(" *n't | no | *n't " , " not " ,text)
-cleaned<-gsub("â???T","",text)
+cleaned<-gsub("Ã¢???T","",text)
 #corpus creation
 cleaned <- VCorpus(VectorSource(text))
 cleaned <- tm_map(cleaned, removeNumbers)
