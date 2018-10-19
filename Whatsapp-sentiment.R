@@ -38,7 +38,7 @@ cleaned<-gsub("â???T","",text)
 cleaned <- VCorpus(VectorSource(text))
 cleaned <- tm_map(cleaned, removeNumbers)
 cleaned <- tm_map(cleaned, removeWords, stopwords("english"))
-cleaned <- tm_map(cleaned, removeWords, c("pm","vishnu","vish","pravin","vaibhav","mohan","kiran","dharmale","architect","pradeep"))
+cleaned <- tm_map(cleaned, removeWords, c("vishnu","vish"))
 cleaned <- tm_map(cleaned, removePunctuation)
 cleaned <- tm_map(cleaned, stripWhitespace)
 #Function to create Bigram
